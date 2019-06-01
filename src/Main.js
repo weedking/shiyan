@@ -1,14 +1,25 @@
 import React from "react";
 import {Layout, Menu} from 'antd'
 import {Link, Route, Switch, Redirect} from "react-router-dom"
+import EditableTable from './EditableTable';
 // import './index.less'
 
 const {Header, Content, Sider, Footer} = Layout;
 
 const MyHeader = () => {
     return (
-        <Header className='main-header'>
-            header
+        <Header className="header">
+            <div className="logo" />
+            <Menu
+                theme="dark"
+                mode="horizontal"
+                defaultSelectedKeys={['1']}
+                style={{ lineHeight: '64px' }}
+            >
+                <Menu.Item key="10">用户信息</Menu.Item>
+                <Menu.Item key="20">nav 2</Menu.Item>
+                <Menu.Item key="30">nav 3</Menu.Item>
+            </Menu>
         </Header>
     );
 }
@@ -16,7 +27,7 @@ const MyHeader = () => {
 const MyFooter = () => {
     return (
         <Footer className='main-footer'>
-            footer
+            销售宝 ©2019 袁氏物语有限公司
         </Footer>
     );
 }
@@ -24,7 +35,7 @@ const MyFooter = () => {
 const Demo1 = () => {
     return (
         <div>
-            demo1
+            <EditableTable />
         </div>
     );
 }
@@ -32,7 +43,7 @@ const Demo1 = () => {
 const Demo2 = () => {
     return (
         <div>
-            demo2
+            第二相差
         </div>
     );
 }
@@ -40,7 +51,7 @@ const Demo2 = () => {
 const Demo3 = () => {
     return (
         <div>
-            demo3
+            第三修改
         </div>
     );
 }
@@ -69,7 +80,7 @@ const LeftSider = () => {
             >
                 <Menu.Item key="/1">
                     <Link to="/1"/>
-                    option1
+                    用户列表
                 </Menu.Item>
                 <Menu.Item key="/2">
                     <Link to="/2"/>

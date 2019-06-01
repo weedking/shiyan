@@ -12,7 +12,6 @@ class App extends React.Component {
 
     render(){
         return (
-
                 <BrowserRouter>
                     <div className="App">
                         <Home/>
