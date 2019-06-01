@@ -4,7 +4,7 @@ import {Link, Route, Switch, Redirect} from "react-router-dom"
 import EditableTable from './EditableTable';
 // import './index.less'
 
-const {Header, Content, Sider, Footer} = Layout;
+const {Header, Content, Sider, Footer, SubMenu, Icon} = Layout;
 
 const MyHeader = () => {
     return (
@@ -56,6 +56,38 @@ const Demo3 = () => {
     );
 }
 
+const Demo4 = () => {
+    return (
+        <div>
+            第四修改
+        </div>
+    );
+}
+
+const Demo5 = () => {
+    return (
+        <div>
+            第五修改
+        </div>
+    );
+}
+
+const Demo6 = () => {
+    return (
+        <div>
+            第六修改
+        </div>
+    );
+}
+
+const Demo7 = () => {
+    return (
+        <div>
+            第七修改
+        </div>
+    );
+}
+
 const RightContent = () => {
     return (
         <div>
@@ -64,6 +96,10 @@ const RightContent = () => {
                     <Route path="/1" component={Demo1}/>
                     <Route path="/2" component={Demo2}/>
                     <Route path="/3" component={Demo3}/>
+                    <Route path="/4" component={Demo4}/>
+                    <Route path="/5" component={Demo5}/>
+                    <Route path="/6" component={Demo6}/>
+                    <Route path="/7" component={Demo7}/>
                     <Redirect to="/1"/>
                 </Switch>
             </Content>
@@ -88,6 +124,22 @@ const LeftSider = () => {
                 </Menu.Item>
                 <Menu.Item key="/3">
                     <Link to="/3"/>
+                    option3
+                </Menu.Item>
+                <Menu.Item key="/4">
+                    <Link to="/4"/>
+                    44
+                </Menu.Item>
+                <Menu.Item key="/5">
+                    <Link to="/5"/>
+                    option2
+                </Menu.Item>
+                <Menu.Item key="/6">
+                    <Link to="/6"/>
+                    option3
+                </Menu.Item>
+                <Menu.Item key="/7">
+                    <Link to="/7"/>
                     option3
                 </Menu.Item>
             </Menu>
